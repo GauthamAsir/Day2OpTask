@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/root"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/operation_console"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="12dp"
+            android:textSize="50sp"/>
+
+        <TextView
+            android:id="@+id/ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="12dp"
+            android:textSize="50sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/numbers_container"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/seven"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_7"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/eight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_8"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/nine"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_9"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/four"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_4"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/five"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_5"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/six"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_6"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_1"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/two"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_2"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/three"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_3"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/dot"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/dot"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/zero"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/_0"
+                    android:padding="24dp"
+                    android:background="?selectableItemBackground"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:padding="24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/operations_container"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                tools:ignore="NestedWeights">
+
+                <TextView
+                    android:id="@+id/divide"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/divide_sign"
+                    tools:targetApi="o"
+                    android:padding="12dp"
+                    android:background="?selectableItemBackground"/>
+
+                <ImageView
+                    android:id="@+id/backspace"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:src="@drawable/ic_outline_backspace"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?selectableItemBackground"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/multiply"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/multiply_symbol"
+                    tools:targetApi="o"
+                    android:padding="12dp"
+                    android:background="?selectableItemBackground"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/subtract"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/subraction_symbol"
+                    tools:targetApi="o"
+                    android:padding="12dp"
+                    android:background="?selectableItemBackground"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/add"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/addition_symbol"
+                    tools:targetApi="o"
+                    android:padding="12dp"
+                    android:background="?selectableItemBackground"/>
+
+                <TextView
+                    android:id="@+id/equals"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="NestedWeights"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/equals_symbol"
+                    tools:targetApi="o"
+                    android:padding="12dp"
+                    android:background="?selectableItemBackground"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
