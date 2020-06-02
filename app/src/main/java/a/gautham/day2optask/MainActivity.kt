@@ -1,34 +1,44 @@
 package a.gautham.day2optask
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     // Numbers
-    lateinit var seven : TextView; lateinit var eight : TextView; lateinit var nine : TextView
+    private lateinit var seven: TextView;
+    private lateinit var eight: TextView
+    private lateinit var nine: TextView
 
-    lateinit var four : TextView; lateinit var five : TextView; lateinit var six : TextView
+    private lateinit var four: TextView;
+    private lateinit var five: TextView
+    private lateinit var six: TextView
 
-    lateinit var one : TextView; lateinit var two : TextView; lateinit var three : TextView
+    private lateinit var one: TextView;
+    private lateinit var two: TextView
+    private lateinit var three: TextView
 
-    lateinit var dot : TextView; lateinit var zero : TextView
+    private lateinit var dot: TextView;
+    private lateinit var zero: TextView
     //Numbers
 
     //Operators
-    lateinit var divide : TextView; lateinit var backspace : ImageView; lateinit var multiply : TextView;
-    lateinit var subtract : TextView; lateinit var add : TextView; lateinit var equal : TextView
+    private lateinit var divide: TextView;
+    private lateinit var backspace: ImageView
+    private lateinit var multiply: TextView
+    private lateinit var subtract: TextView;
+    private lateinit var add: TextView
+    private lateinit var equal: TextView
     //Operators
 
-    lateinit var console : TextView
-    lateinit var answer : TextView
+    private lateinit var console: TextView
+    private lateinit var answer: TextView
 
-    var consoleArray = ArrayList<String>()
-    var p : Int? = null
+    private var consoleArray = ArrayList<String>()
+    private var p: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +67,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         //Operators
         divide = findViewById(R.id.divide)
-        backspace  = findViewById<ImageView>(R.id.backspace)
+        backspace = findViewById(R.id.backspace)
         multiply = findViewById(R.id.multiply)
         subtract = findViewById(R.id.subtract)
         add = findViewById(R.id.add)
@@ -187,7 +197,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             }else{
                                 one = it
                             }
-                            Log.d("test1",one)
                         }
                         else{
                             if (two!=null){
@@ -195,7 +204,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             }else{
                                 two = it
                             }
-                            Log.d("test2",two)
                         }
 
                     }else if (operations==null) {
@@ -211,7 +219,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                         one = p.toString()
                         two = null
-                        Log.d("test",one)
                         operations = it
 
                         return@forEach
