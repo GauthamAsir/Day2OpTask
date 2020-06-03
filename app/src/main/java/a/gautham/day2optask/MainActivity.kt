@@ -9,27 +9,27 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     // Numbers
-    private lateinit var seven: TextView;
+    private lateinit var seven: TextView
     private lateinit var eight: TextView
     private lateinit var nine: TextView
 
-    private lateinit var four: TextView;
+    private lateinit var four: TextView
     private lateinit var five: TextView
     private lateinit var six: TextView
 
-    private lateinit var one: TextView;
+    private lateinit var one: TextView
     private lateinit var two: TextView
     private lateinit var three: TextView
 
-    private lateinit var dot: TextView;
+    private lateinit var dot: TextView
     private lateinit var zero: TextView
     //Numbers
 
     //Operators
-    private lateinit var divide: TextView;
+    private lateinit var divide: TextView
     private lateinit var backspace: ImageView
     private lateinit var multiply: TextView
-    private lateinit var subtract: TextView;
+    private lateinit var subtract: TextView
     private lateinit var add: TextView
     private lateinit var equal: TextView
     //Operators
@@ -182,7 +182,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.equals -> {
-                val nums = arrayOf("1","2","3","4","5","6","7","8",'9','0')
+                val nums = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "0")
 
                 var one : String? = null
                 var two : String? = null
